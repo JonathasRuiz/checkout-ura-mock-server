@@ -1,0 +1,27 @@
+{
+  "name": "smiles-checkout-ura-mock-server",
+  "version": "1.0.0",
+  "description": "Mock server for ura checkout",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon src/server.js"
+  },
+  "keywords": [
+    "Mock",
+    "server",
+    "ura",
+    "checkoput"
+  ],
+  "author": "Jonathas Ruiz dos Santos",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-validation": "^1.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}
