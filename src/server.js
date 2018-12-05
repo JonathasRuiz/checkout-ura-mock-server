@@ -6,6 +6,7 @@ var bodyParser = require('body-parser')
 var loginData = require('./db/logindata');
 var offerData = require('./db/getofferdata');
 var tokenInfo = require('./db/gettokeninfo');
+var userData = require('./db/getuserdata');
 var getCheckoutData = require('./db/getcheckout');
 var addCheckoutData = require('./db/addcheckoutdata');
 
@@ -19,6 +20,11 @@ app.get('/api/login', function (req, res) {
    res.send(JSON.stringify(loginData));
    // console.log(req.headers);
 });
+app.get('/api/user', function (req, res) {
+   res.header("Access-Control-Allow-Origin", "*");
+   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+   res.send(JSON.stringify(userData));
+})
 app.post('/api/checkout', function (req, res) {
    res.header("Access-Control-Allow-Origin", "*");
    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
